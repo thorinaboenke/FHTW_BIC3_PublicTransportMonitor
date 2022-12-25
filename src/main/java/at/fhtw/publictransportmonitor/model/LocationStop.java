@@ -23,8 +23,16 @@ public class LocationStop {
         this.lines = lines;
     }
 
+
+    public String linesToString(){
+        String output = "";
+        for (Line l :  this.lines){
+            output += l.toString();
+        }
+        return output;
+    }
     @Override
     public String toString() {
-        return "LocationStop " + title + lines.get(0).toString();
+        return "Stop " + title + "\n" + this.linesToString() + " \n";
     }
 }

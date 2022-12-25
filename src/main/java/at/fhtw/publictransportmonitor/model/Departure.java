@@ -35,10 +35,12 @@ public class Departure {
         this.countdown = countdown;
     }
 
+
+
     @Override
     public String toString() {
         try {
-            return "Departing at " + timeStringToTime(timeReal) + " in " + countdown + " min";
+            return "Departing at " + timeStringToTime(timeReal) + " in " + countdown + " min \n";
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
@@ -47,6 +49,6 @@ public class Departure {
 
     public String timeStringToTime(String timeString) throws ParseException {
         
-        return timeString.substring(15,19);
+        return timeString.substring(12,17);
     }
 }

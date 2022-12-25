@@ -43,15 +43,17 @@ public class HelloApplication extends Application {
 
         Button btnDisplay = new Button("Display Departures");
         Button btnSwitchLocation = new Button("Switch Location");
+        Button btnDisplayDisruptions = new Button("Display Disruptions");
 
         outerVBox.getChildren().addAll(departures, borderPane);
         borderPane.setLeft(innerVBox);
         borderPane.setCenter(lvLocations);
-        innerVBox.getChildren().addAll(btnDisplay, btnSwitchLocation);
+        innerVBox.getChildren().addAll(btnDisplay, btnSwitchLocation, btnDisplayDisruptions);
 
         departures.setPrefHeight(200);
         btnDisplay.setPrefWidth(200);
         btnSwitchLocation.setPrefWidth(200);
+        btnDisplayDisruptions.setPrefWidth(200);
         innerVBox.setSpacing(10);
         outerVBox.setSpacing(10);
         innerVBox.setPadding(new Insets(0,10,0,0));
@@ -71,14 +73,21 @@ public class HelloApplication extends Application {
 
         btnSwitchLocation.setOnAction(e -> {
             lvLocations.getSelectionModel().getSelectedItem();
+        });
+
+        btnDisplayDisruptions.setOnAction(e -> {
 
         });
 
         btnDisplay.setOnAction(e -> {
-            lvLocations.getSelectionModel().getSelectedItem();
+            String input = lvLocations.getSelectionModel().getSelectedItem();
+            Integer id = 1450; // default
+            String numberOnly = input.replaceAll("[^0-9]", ""); // leaves only digits
+            id = Integer.parseInt(numberOnly);
+            String url = "https://www.wienerlinien.at/ogd_realtime/monitor?stopId=" + id.toString() +"&aArea=1";
             try {
                 HttpRequest request = HttpRequest.newBuilder()
-                        .uri(new URI("https://www.wienerlinien.at/ogd_realtime/monitor?stopId=1450"))
+                        .uri(new URI(url))
                         .headers("Content-Type", "application/json")
                         .timeout(Duration.of(10, SECONDS))
                         .GET().build();
@@ -125,7 +134,6 @@ public class HelloApplication extends Application {
                             dep.setTimeReal(timeReal);
                             dep.setCountdown(countdown);
                             deps.add(dep);
-                            System.out.println(dep.getCountdown());
                         }
 
                         line.setDepartures(deps);
