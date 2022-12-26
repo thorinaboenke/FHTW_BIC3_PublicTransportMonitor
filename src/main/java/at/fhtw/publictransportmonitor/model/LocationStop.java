@@ -33,6 +33,6 @@ public class LocationStop {
     }
     @Override
     public String toString() {
-        return "Stop " + title + "\n" + this.linesToString() + " \n";
+        return "\n" + this.linesToString() + " \n";
     }
 }
