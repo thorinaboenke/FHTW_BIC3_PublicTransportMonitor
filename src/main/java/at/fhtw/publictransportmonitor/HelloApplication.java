@@ -75,19 +75,15 @@ public class HelloApplication extends Application {
         // select default location
         lvLocations.getSelectionModel().select(0);
 
-
-
+        // for switching the selected locations
         btnSwitchLocation.setOnAction(e -> {
             lvLocations.getSelectionModel().getSelectedItem();
         });
 
+        // writing a report to a txt file. StringToTxtWriter uses Threads
         btnGenerateReport.setOnAction(e -> {
-            try (PrintWriter out = new PrintWriter("report.txt")) {
-                out.println(departures.getText());
-                out.println(disruptions.getText());
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
+            StringToTxtWriter writer = new StringToTxtWriter("report.txt", new String[]{departures.getText(), disruptions.getText()});
+            writer.run();
         });
 
         btnDisplayDisruptions.setOnAction(e -> {
@@ -112,6 +108,7 @@ public class HelloApplication extends Application {
                         JsonNode reason = disruptionsArrayNode.get(i).at("/attributes/reason");
                         Disruption dis = new Disruption(title.asText(), description.asText(), reason.asText());
                         disruptionList.add(dis);
+                        // append the retrieved disruption to the TextArea for displaying
                         disruptions.appendText(dis.toString());
                     }
                 }
@@ -148,7 +145,7 @@ public class HelloApplication extends Application {
                     JsonNode locationStopNode = arrayNode.get(h).at("/locationStop/properties/title");
                     locationStop.setTitle(locationStopNode.toString());
                     if( h== 0) {
-                        // only display the stop name once
+                        // only display the stop name once on first iteration
                         departures.appendText(locationStopNode.toString());
                     }
 
@@ -179,7 +176,6 @@ public class HelloApplication extends Application {
                                 dep.setCountdown(countdown);
                                 deps.add(dep);
                             }
-
                             line.setDepartures(deps);
                             lines.add(line);
                         }

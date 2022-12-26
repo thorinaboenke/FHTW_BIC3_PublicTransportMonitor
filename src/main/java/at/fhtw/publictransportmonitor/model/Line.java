@@ -32,12 +32,15 @@ public class Line {
         this.departures = departures;
     }
 
-    public String linesToString(){
+    public String departuresToString(){
         // display next two departures only
         String output = "";
         for(int i = 0; i<2; i++) {
             Departure dep = this.departures.get(i);
             output += dep.toString();
+            if (this.departures.size() < 2 ){
+                break;
+            }
         }
 
         return output;
@@ -46,6 +49,6 @@ public class Line {
     @Override
     public String toString() {
         return "Line "  + name +
-                " towards " + towards + " \n" + linesToString();
+                " towards " + towards + " \n" + departuresToString();
     }
 }

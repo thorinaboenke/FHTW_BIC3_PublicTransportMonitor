@@ -1,32 +1,22 @@
-"Hütteldorfer Straße U"
-Line 10 towards Unter St. Veit 
-Departing at 15:35 in 1 min 
-Departing at 15:47 in 13 min 
+"Laxenburger Straße / Gudrunstraße"
+Line 14A towards Reumannplatz U 
+Departing at 20:43 in 11 min 
+Departing at 20:56 in 24 min 
  
 
-Line 10 towards Dornbach 
-Departing at 15:37 in 3 min 
-Departing at 15:45 in 11 min 
+Line 14A towards Neubaugasse U 
+Departing at 20:38 in 5 min 
+Departing at 20:53 in 20 min 
  
 
-Line 49 towards Hütteldorf 
-Departing at 15:37 in 3 min 
-Departing at 15:49 in 16 min 
+Line O towards Bruno-Marek-Allee 
+Departing at 20:37 in 4 min 
+Departing at 20:47 in 14 min 
  
 
-Line 49 towards Ring, Volkstheater U 
-Departing at 15:41 in 7 min 
-Departing at 15:51 in 17 min 
- 
-
-Line U3 towards SIMMERING        
-Departing at 15:38 in 5 min 
-Departing at 15:43 in 10 min 
- 
-
-Line U3 towards OTTAKRING        
-Departing at 15:33 in 0 min 
-Departing at 15:39 in 6 min 
+Line O towards Raxstraße, Rudolfshügelgasse 
+Departing at 20:34 in 1 min 
+Departing at 20:45 in 13 min 
  
 
 Westbahnhof
@@ -44,17 +34,5 @@ An der Instandsetzung wird bereits gearbeitet.
 Karlsplatz
 Opernpassage - Ausgang Kärtner Straße
 An der Instandsetzung wird bereits gearbeitet.
- 
-U3 : Verunreinigung
-Die U-Bahnlinie U3 kann wegen einer Verunreinigung derzeit in beiden Richtungen nur unregelmäßig fahren.
-
- 
-68A Falschparker
-Nach einer Fahrtbehinderung kommt es auf der Linie 68A zu unterschiedlichen Intervallen.
-
- 
-U1: Verspätungen
-Die U-Bahnlinie U1 kann wegen einer Betriebsstörung derzeit in beiden Richtungen nur unregelmäßig fahren.
-
  
 

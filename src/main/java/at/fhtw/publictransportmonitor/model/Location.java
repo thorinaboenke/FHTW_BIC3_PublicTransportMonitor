@@ -27,8 +27,7 @@ public class Location {
 
     @Override
     public String toString() {
-        return "Location: " +
-                 Name +
+        return Name +
                 " , id " + id
                 ;
     }

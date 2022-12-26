@@ -34,9 +34,6 @@ public class Departure {
     public void setCountdown(Integer countdown) {
         this.countdown = countdown;
     }
-
-
-
     @Override
     public String toString() {
         try {
@@ -48,7 +45,6 @@ public class Departure {
     }
 
     public String timeStringToTime(String timeString) throws ParseException {
-        
         return timeString.substring(12,17);
     }
 }

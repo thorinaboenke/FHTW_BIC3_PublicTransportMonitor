@@ -40,9 +40,6 @@ public class CsvOpener {
         System.out.println("No file found");
             ex.printStackTrace();
         }
-
         return locations;
-
-
     }
 }
