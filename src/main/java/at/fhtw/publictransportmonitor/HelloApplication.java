@@ -1,6 +1,8 @@
 package at.fhtw.publictransportmonitor;
 
 import at.fhtw.publictransportmonitor.model.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -14,23 +16,10 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.io.DataInput;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-
-
-import com.fasterxml.jackson.databind.*;
-
-import static java.time.temporal.ChronoUnit.SECONDS;
 
 public class HelloApplication extends Application {
     @Override
