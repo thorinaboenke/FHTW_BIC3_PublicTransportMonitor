@@ -44,6 +44,13 @@ public class Departure {
 
     }
 
+    /**
+     * Extracts the hours and minutes form a time string and return them in the format "hh:mm"
+     *
+     * @param  timeString time string to be converted
+     * @return      a string in the format "hh:mm" representing a departure time
+     *
+     */
     public String timeStringToTime(String timeString) throws ParseException {
         return timeString.substring(12,17);
     }

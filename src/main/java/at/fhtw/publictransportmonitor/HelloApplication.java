@@ -64,7 +64,7 @@ public class HelloApplication extends Application {
         outerVBox.setPadding(new Insets(10,10,10,10));
 
         CsvOpener csvOpener = new CsvOpener();
-        ArrayList<Location> loc = csvOpener.parseCsv();
+        ArrayList<Location> loc = csvOpener.parseCsv("locations.csv");
 ;
         ObservableList<String> locations = FXCollections.observableArrayList();
         for( Location l : loc ){

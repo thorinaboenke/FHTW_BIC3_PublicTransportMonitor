@@ -9,12 +9,23 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class CsvOpener {
-    public static ArrayList<Location> parseCsv() throws IOException {
+
+    /**
+     * Parses a .csv file "locations.csv" in the root directory into an array of Locations
+     * Makes use of a Buffered Reader.
+     * If the file does not exist an IOException is thrown.
+     * First column of the file holds name, second column id of the location, the rest is ignored
+     *
+     * @param  filename the file to be parsed
+     * @return      an array list of Locations
+     * @throws java.io.IOException throws an exception if file cannot be found
+     */
+    public ArrayList<Location> parseCsv(String filename) throws IOException {
         ArrayList<Location> locations = new ArrayList<Location>();
         BufferedReader br = null;
         // create a reader
         try {
-            br = new BufferedReader(new FileReader("locations.csv"));
+            br = new BufferedReader(new FileReader(filename));
 
 
             // CSV file delimiter

@@ -32,6 +32,12 @@ public class Line {
         this.departures = departures;
     }
 
+    /**
+     * Returns a String representation of the next two departures.
+     *
+     * @return      a string with information on the next two departures
+     *
+     */
     public String departuresToString(){
         // display next two departures only
         String output = "";
