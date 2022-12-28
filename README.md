@@ -37,12 +37,21 @@ Die verschiedenen Orte und ihre IDs werden aus dem file "locations.csv" eingeles
 
 Ein Graphical User Interface wurde mit JavaFx generiert.
 
+Bei Klick auf "Display Departures" wird ein Http GET request für die ID des aktuell ausgewählten Ort an 
+```java
+https://www.wienerlinien.at/ogd_realtime/monitor?stopId=<ID>&aArea=1
+```
+Bei Klick auf "Display Departures" wird ein Http GET request für die ID des aktuell ausgewählten Ort an https://www.wienerlinien.at/ogd_realtime/monitor?stopId=<ID>&aArea=1
 Bei Klick auf "Display Departures" wird ein Http GET request für die ID des aktuell ausgewählten Ort an https://www.wienerlinien.at/ogd_realtime/monitor?stopId=<ID>&aArea=1
 gestellt. Der zurückerhaltene Json String wird in Objekte für LocationsStops, Lines und Deaprtures geparsed.
 
 Bei Klick auf "Change Locations" wird der ausgewählte Ort gewechselt ohne eine neue Anfrage zustellen.
 
-Bei Klick auf "Display Disruptions" wird ein Http GET request an "https://www.wienerlinien.at/ogd_realtime/trafficInfoList" gestellt. Der zurückerhaltene Json String wird in Disruption Objekts geparsed.
+Bei Klick auf "Display Disruptions" wird ein Http GET request an 
+  ```java
+https://www.wienerlinien.at/ogd_realtime/trafficInfoList
+``` 
+  gestellt. Der zurückerhaltene Json String wird in Disruption Objekts geparsed.
 
 Bei Klick auf "Generate Report" wird die aktuelle Anzeige von Linien und Störungen im file "report.txt" abgespeichert. Dies geschieht in einem separaten Thread.
 
