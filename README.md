@@ -41,8 +41,6 @@ Bei Klick auf "Display Departures" wird ein Http GET request für die ID des akt
 ```java
 https://www.wienerlinien.at/ogd_realtime/monitor?stopId=<ID>&aArea=1
 ```
-Bei Klick auf "Display Departures" wird ein Http GET request für die ID des aktuell ausgewählten Ort an https://www.wienerlinien.at/ogd_realtime/monitor?stopId=<ID>&aArea=1
-Bei Klick auf "Display Departures" wird ein Http GET request für die ID des aktuell ausgewählten Ort an https://www.wienerlinien.at/ogd_realtime/monitor?stopId=<ID>&aArea=1
 gestellt. Der zurückerhaltene Json String wird in Objekte für LocationsStops, Lines und Deaprtures geparsed.
 
 Bei Klick auf "Change Locations" wird der ausgewählte Ort gewechselt ohne eine neue Anfrage zustellen.
