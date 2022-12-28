@@ -48,7 +48,7 @@ Bei Klick auf "Generate Report" wird die aktuelle Anzeige von Linien und Störun
 
 Javadocs can be found in the folder "docs". Open "index.html" in a browser to look at the project documentation.
 
-![The Graphical User Inferface]( "GUI")
+![The Graphical User Inferface](https://github.com/thorinaboenke/PublicTransportMonitor/blob/main/src/main/resources/at/fhtw/publictransportmonitor/Screenshot%202022-12-28%20at%2014.59.27.png "GUI")
 
 
 
