@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"at.fhtw.publictransportmonitor","l":"at.fhtw.publictransportmonitor"},{"m":"at.fhtw.publictransportmonitor","l":"at.fhtw.publictransportmonitor.model"}];updateSearchResults();

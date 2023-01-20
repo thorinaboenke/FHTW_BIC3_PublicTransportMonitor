@@ -1,0 +1,1 @@
+moduleSearchIndex = [{"l":"at.fhtw.publictransportmonitor"}];updateSearchResults();
